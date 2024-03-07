@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
 import androidx.navigation.Navigation
 import com.ubaya.anmp_week1.databinding.FragmentMainBinding
 
@@ -26,6 +27,10 @@ class MainFragment : Fragment() {
         binding.btnStart.setOnClickListener {
             val name = binding.txtName.text.toString()
             val action = MainFragmentDirections.actionGamefragment(name)//akan berpindah ke game fragment
+            Navigation.findNavController(it).navigate(action)
+        }
+        binding.btnSetting.setOnClickListener {
+            val action = MainFragmentDirections.actionOptionFragment()
             Navigation.findNavController(it).navigate(action)
         }
     }
