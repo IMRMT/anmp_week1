@@ -33,7 +33,9 @@
         tools:layout="@layout/fragment_game_over" >
         <action
             android:id="@+id/action_mainFragment"
-            app:destination="@id/mainFragment" />
+            app:destination="@id/mainFragment"
+            app:popUpTo="@id/mainFragment"
+            app:popUpToInclusive="true" />
         <argument
             android:name="player_score"
             app:argType="integer" />
